@@ -1,0 +1,479 @@
+//ПЕРЕМЕННЫЕ
+
+//Цвета страницы
+
+//Акцентный цвет
+$action-color: #FFEEC3;
+
+//Фон
+$background--color: #1A1B20;
+$background-input--color: #22242A;
+$background-icon--color: #464A4C;
+
+//Кнопки
+$button--color: #2E2E2E;
+$button-accent--color: #FFFFFF;
+
+//Текст
+$text--color: #FFFFFF;
+$text-dark--color: #1A1B20;
+$text-support--color: #A2A2A2;
+
+//Обводка
+$stroke-additional--color: #565656;
+$stroke-main--color: #979797;
+$stroke-accent--color: #FFFFFF;
+
+//Иконки
+$icon-inactive--color: #7F7F7F;
+$icon-active--color: #FFFFFF;
+
+//Шрифты
+
+//Merriweather
+@font-face {
+  font-family: "Merriweather";
+  src: url('../fonts/Merriweather-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+//Montserrat
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+//Радиус кнопок
+
+$button--radius: 8px;
+$table--radius: 5px;
+$icon-color--radius: 5px;
+$icon-texture--radius: 5px;
+$icon-arrow--radius: 3.75px;
+$input--radius: 5px;
+
+//Время трансформации
+$transition-duration: 0.2s;
+
+
+h1 {
+  font-size: 3.4375em;
+  font-family: 'Merriweather';
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-family: 'Merriweather';
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-family: 'Merriweather';
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.125em;
+  font-family: 'Montserrat-SemiBold';
+}
+
+button {
+  font-family: 'Montserrat-Medium';
+}
+
+li, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $text--color;
+}
+
+.menu {
+  a:after {
+    display: block;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 1px; /*задаём ширину линии*/
+    background-color: $text--color; /*задаём цвет линии*/
+    content: "";
+    transition: 0.3s; /*задаём время анимации*/
+  }
+
+  a:hover:after,
+  a:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+  }
+
+  a:hover {
+    transition: $transition-duration;
+    text-shadow: 0 0 .65px
+  }
+}
+
+.submit-application {
+  .submit-application--button {
+    display: flex;
+    padding: 1.25em 4em;
+    justify-content: center;
+    align-items: center;
+    border-radius: $button--radius;
+    background: $button-accent--color;
+    cursor: pointer;
+  }
+
+  .submit-application--button:hover {
+    background: $action-color;
+    transition: $transition-duration;
+  }
+}
+
+body {
+  background-color: $background--color;
+  //width: 1440px;
+  //margin: 0 130px;
+  margin: auto;
+  color: $text--color;
+  font-family: 'Montserrat-Regular';
+  font-size: 16px;
+}
+
+//-------------------------
+
+//header
+
+header {
+  padding: 0.25em 8.125em;
+  border-bottom: 1px solid $stroke-main--color;
+
+  .header--section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-img {
+    flex-shrink: 0;
+  }
+
+  .header-menu--list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5625em;
+  }
+}
+
+main {
+  padding: 0 130px;
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    padding: 7.5em 0 3.75em 0;
+
+    h1 {
+      font-weight: 300;
+    }
+  }
+
+  .main {
+    .description-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875em;
+
+      p {
+        width: 25.9375em;
+      }
+    }
+
+    .submit-application {
+      margin-top: 3.125em;
+    }
+
+    .vertical-line--decor {
+
+      .line {
+        width: 1px;
+        height: 15.625em;
+        background: $stroke-main--color;
+        margin: 3.125em 0 0 8.4375em;
+      }
+
+    }
+
+    .stages {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-page-up {
+      position: absolute;
+      top: 6.25em;
+      right: 0;
+      z-index: -1;
+    }
+
+    .stages--text {
+      display: flex;
+      margin-top: 33.125em;
+      gap: 3.75em;
+      align-items: center;
+      color: $text-support--color;
+
+      .vertical-line {
+
+        stroke-width: 1px;
+        background-color: $stroke-main--color;
+        height: 1.875em;
+        width: 1px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+
+
+    .horizontal-line--decor {
+      height: 1px;
+      background-color: $stroke-main--color;
+      margin: -11.3125em 0 0 8.4375em;
+      width: 50%;
+    }
+
+    .vertical-line--decor {
+      height: 1.5625em;
+      width: 1px;
+      background-color: $stroke-main--color;
+      margin: 0px 0px 0px 45.25em;
+    }
+
+
+    .description {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -8.125em;
+    }
+
+    .main-page-center {
+      position: absolute;
+      left: 0;
+      width: 43.75em;
+      height: 27.625em;
+      margin-top: 0.875em;
+    }
+
+    .description-text {
+      width: 35.625em;
+
+      h2 {
+        font-weight: 300;
+      }
+
+      p {
+        font-size: 0.875em;
+        padding-top: 0.3125em;
+      }
+
+      ul {
+        padding-top: 0.3125em;
+      }
+
+      li {
+        font-size: 0.875em;
+        list-style-type: disc;
+        margin-left: 1.5625em;
+      }
+
+      h4 {
+        padding-top: 0.625em;
+      }
+    }
+
+    .company-advantages {
+      padding-top: 7.5em;
+      justify-content: center;
+      display: flex;
+      gap: 2.5em;
+    }
+
+    .advantage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.9375em 1.5625em;
+      width: 20em;
+      border-radius: 5px;
+      border: 1px solid $stroke-main--color;
+    }
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: column;
+
+    .logo-partners {
+      display: grid;
+      grid-column-gap: 8.75em;
+      grid-row-gap: 3.125em;
+      grid-template-columns: repeat(auto-fill, minmax(10.6875em, 1fr));
+      margin-top: 3.125em;
+    }
+
+    .lines-decor {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 2.5em;
+      .horizontal-line--decor {
+        height: 1px;
+        background-color: $stroke-main--color;
+        margin: 0em -8.125em 0em 0em;
+        width: 71.875em;
+      }
+
+      .vertical-line--decor {
+        height: 1.875em;
+        width: 1px;
+        background-color: $stroke-main--color;
+        margin: 0px 0px 0px 0em;
+      }
+    }
+  }
+
+  .works {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.125em;
+
+    iframe {
+      width: 100%;
+      height: 37.5em;
+    }
+  }
+}
+
+footer {
+  padding: 3.75em 8.125em;
+  border-top: 1px solid $stroke-main--color;
+
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .information-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 15em;
+  }
+
+  .contacts-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-text--list {
+    padding-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  .contacts-icons {
+    padding-top: 4.375em;
+    display: flex;
+    gap: 1.875em;
+
+    .contacts-icons--image {
+      flex-shrink: 0;
+    }
+
+    svg:hover {
+      fill: $action-color;
+      transition: $transition-duration;
+
+      #Vector {
+        fill: $action-color;
+        transition: $transition-duration;
+      }
+    }
+  }
+
+  .catalog-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog-text--list {
+    padding-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  .big-logo-img {
+    flex-shrink: 0;
+  }
+
+  .tagline {
+    padding-top: 4.375em;
+  }
+
+  .request-phone {
+    padding-top: 1.25em;
+  }
+
+  .request-phone--button {
+    display: flex;
+    padding: 1.125em 4em 1.25em 4em;
+    justify-content: center;
+    align-items: center;
+    border-radius: $button--radius;
+    background: $button-accent--color;
+    cursor: pointer;
+  }
+
+  .request-phone--button:hover {
+    background: $action-color;
+    transition: $transition-duration;
+  }
+}
+
+
+
+
+
+
