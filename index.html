@@ -6,7 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="newDesign/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="newDesign/dist/style.css">
+
     <title>Elitvid</title>
 </head>
 <body>
@@ -141,12 +143,94 @@
     </section>
     <section class="produce">
         <h2>Мы производим</h2>
-
+        <div class="directions">
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/pots.png" alt="Фотография направления кашпо">
+                <a href="">
+                    <button>Кашпо</button>
+                </a>
+            </div>
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/benches.png" alt="Фотография направления скамеек">
+                <a href="">
+                    <button>Скамьи</button>
+                </a>
+            </div>
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/rotundas.png" alt="Фотография направления ротонд и коллонад">
+                <a href="">
+                    <button>Ротонды и коллонады</button>
+                </a>
+            </div>
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/parklets.png" alt="Фотография направления парклетов и навесов">
+                <a href="">
+                    <button>Парклеты, навесы</button>
+                </a>
+            </div>
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/bollards.png" alt="Фотография направления боллард и ограждений">
+                <a href="">
+                    <button>Болларды и ограждения</button>
+                </a>
+            </div>
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/pillars.png" alt="Фотография направления столбов и накрывок">
+                <a href="">
+                    <button>Столбы и накрывки</button>
+                </a>
+            </div>
+            <div class="direction">
+                <img src="./newDesign/imgs/main_page/directions/facade_stucco.png" alt="Фотография направления фасадной лепнины и панелей">
+                <a href="">
+                    <button>Фасадная лепнина и панели</button>
+                </a>
+            </div>
+        </div>
     </section>
     <section class="works">
         <h2>Наши работы</h2>
         <div class="produce-video">
             <iframe src="https://www.youtube.com/embed/ziCM3lxEoOQ?si=Fz5sCstSasMpl0n4&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="works-examples">
+            <div class="main__slider swiper">
+                <!-- Additional required wrapper -->
+                <div class="main-swiper-wrapper__slider swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev arrow-left arrow">
+                    <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Line 1" d="M9.54419 1.5L2.45559 9L9.54419 16.5" stroke="white" stroke-width="2.99575" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next arrow-right arrow">
+                    <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Line 1" d="M2.45581 1.5L9.54441 9L2.45581 16.5" stroke="white" stroke-width="2.99575" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="thumbs__slider swiper">
+                <!-- Additional required wrapper -->
+                <div class="main-swiper-wrapper__slider swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./newDesign/imgs/main_page/slider/1180x592.png" alt=""></div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
@@ -231,5 +315,7 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./newDesign/js/sliders/main_slider.js"></script>
 </body>
 </html>
