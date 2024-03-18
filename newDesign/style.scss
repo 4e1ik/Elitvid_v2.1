@@ -33,7 +33,7 @@ $icon-active--color: #FFFFFF;
 //Merriweather
 @font-face {
   font-family: "Merriweather";
-  src: url('../fonts/Merriweather-Light.woff2') format('woff2');
+  src: url('./fonts/Merriweather-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -42,7 +42,7 @@ $icon-active--color: #FFFFFF;
 //Montserrat
 @font-face {
   font-family: "Montserrat-Medium";
-  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+  src: url('./fonts/Montserrat-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -50,7 +50,7 @@ $icon-active--color: #FFFFFF;
 
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  src: url('./fonts/Montserrat-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -58,7 +58,7 @@ $icon-active--color: #FFFFFF;
 
 @font-face {
   font-family: "Montserrat-SemiBold";
-  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+  src: url('./fonts/Montserrat-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -118,6 +118,11 @@ a {
 }
 
 .menu {
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+  }
   a:after {
     display: block;
     left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
@@ -194,6 +199,7 @@ header {
 
 main {
   padding: 0 130px;
+  position: relative;
 
   section {
     display: flex;
@@ -239,7 +245,7 @@ main {
 
     .main-page-up {
       position: absolute;
-      top: 6.25em;
+      top: 2em;
       right: 0;
       z-index: -1;
     }
@@ -293,7 +299,8 @@ main {
       left: 0;
       width: 43.75em;
       height: 27.625em;
-      margin-top: 0.875em;
+      margin-top: 0.77em;
+      z-index: -1;
     }
 
     .description-text {
@@ -391,6 +398,52 @@ main {
       margin-top: 3.125em;
     }
 
+    .slogan__direction {
+      display: flex;
+      flex-direction: column;
+      //justify-content: center;
+      //align-items: center;
+      gap: 20px;
+      width: 45em;
+      padding: 60px 0 0 100px;
+      position: relative;
+
+      p {
+        font-size: 14px;
+      }
+
+      .lines-decor {
+        position: absolute;
+        margin-top: 175px;
+      }
+
+      .horizontal-line--decor {
+        width: 852px;
+        height: 1px;
+        background-color: $stroke-main--color;
+        position: absolute;
+        left: -50px;
+      }
+
+      .vertical-line--decor {
+        width: 1px;
+        height: 90px;
+        background-color: $stroke-main--color;
+        position: absolute;
+        left: -50px;
+      }
+
+      .horizontal-line-2--decor {
+        width: 42px;
+        height: 1px;
+        background-color: $stroke-main--color;
+        position: absolute;
+        right: 851px;
+        left: -91px;
+        top: 90px;
+      }
+    }
+
     .direction {
       display: flex;
       flex-direction: column;
@@ -468,8 +521,11 @@ main {
     }
 
     .thumbs__slider {
-      //width: 100%;
       margin-top: 1.25em;
+
+      .swiper-slide-thumb-active {
+        opacity: .54;
+      }
     }
   }
 }
@@ -561,6 +617,23 @@ footer {
   }
 }
 
+
+@media (min-width: 1440px) {
+  header {
+    width: 1440px;
+    margin: auto;
+  }
+
+  main {
+    width: 1440px;
+    margin: auto;
+  }
+
+  footer {
+    width: 1440px;
+    margin: auto;
+  }
+}
 
 
 
