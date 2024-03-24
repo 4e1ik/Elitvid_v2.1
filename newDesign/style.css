@@ -79,6 +79,32 @@ a {
 .menu a:hover {
   transition: 0.2s;
   text-shadow: 0 0 0.65px; }
+.menu button {
+  background: none;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-family: Montserrat-Regular; }
+.menu button:after {
+  display: block;
+  left: 0;
+  /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0;
+  /*задаём длинну линии до наведения курсора*/
+  height: 1px;
+  /*задаём ширину линии*/
+  background-color: #FFFFFF;
+  /*задаём цвет линии*/
+  content: "";
+  transition: 0.3s;
+  /*задаём время анимации*/ }
+.menu button:hover:after,
+.menu button:focus:after {
+  width: 100%;
+  /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/ }
+.menu button:hover {
+  transition: 0.2s;
+  text-shadow: 0 0 0.65px; }
 
 .submit-application .submit-application--button {
   display: flex;
@@ -100,7 +126,10 @@ a {
   background: rgba(151, 151, 151, 0.05);
   backdrop-filter: blur(4px);
   top: 0;
-  left: 0; }
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 2; }
   .popup .popup__body {
     min-height: 100%;
     display: flex;
@@ -116,7 +145,8 @@ a {
     align-items: flex-start;
     gap: 1.25em;
     border-radius: 8px;
-    background: #1A1B20; }
+    background: #1A1B20;
+    border: 2px solid #FFF; }
   .popup .popup__cross {
     position: absolute;
     top: 1.25em;
@@ -133,7 +163,40 @@ a {
     gap: 1.25em; }
     .popup .popup_content__inputs input {
       width: 30.625em;
-      margin-top: 0.5em; }
+      margin-top: 0.5em;
+      outline: none; }
+  .popup .popup__body_call .call {
+    flex-direction: column; }
+    .popup .popup__body_call .call select {
+      width: 25%; }
+    .popup .popup__body_call .call input {
+      width: 100%; }
+  .popup .popup__body_call p {
+    font-size: 14px; }
+  .popup .popup__body_call form {
+    width: 34em; }
+  .popup .popup__body_call .submit__button {
+    width: 100%; }
+  .popup .poop {
+    display: flex;
+    position: relative; }
+    .popup .poop select {
+      color: #FFFFFF;
+      display: flex;
+      height: 2.8125em;
+      align-items: center;
+      gap: 0.625em;
+      align-self: stretch;
+      border-radius: 4px 0 0 4px;
+      border: 1px solid #979797;
+      background: #22242A;
+      margin-top: 8px;
+      width: 18%;
+      position: absolute;
+      border-right: none;
+      outline: none; }
+    .popup .poop input {
+      padding-left: 6.25em; }
   .popup input {
     color: #FFFFFF;
     display: flex;
@@ -251,6 +314,7 @@ main {
       flex-direction: column; }
     main .main .main-page-up {
       position: absolute;
+      width: 56.5625em;
       top: 2em;
       right: 0;
       z-index: -1; }
@@ -360,7 +424,9 @@ main {
       gap: 1.25em;
       width: 45em;
       padding: 3.75em 0 0 6.25em;
-      position: relative; }
+      position: relative;
+      grid-column-start: 2;
+      grid-column-end: 4; }
       main .produce .slogan__direction p {
         font-size: 14px; }
       main .produce .slogan__direction .lines-decor {
@@ -460,6 +526,8 @@ footer {
     gap: 1.875em; }
     footer .contacts-icons .contacts-icons--image {
       flex-shrink: 0; }
+    footer .contacts-icons svg {
+      width: 2.25em; }
     footer .contacts-icons svg:hover {
       fill: #FFEEC3;
       transition: 0.2s; }
@@ -503,6 +571,26 @@ footer {
 
   footer {
     width: 1440px;
+    margin: auto; } }
+@media (max-width: 900px) {
+  body {
+    font-size: 11px; }
+
+  header {
+    width: 900px;
+    margin: auto; }
+
+  main {
+    width: 900px;
+    margin: auto;
+    padding: 0 50px; }
+    main .advantages .main-page-center {
+      left: -5.75em; }
+    main .advantages .vertical-line--decor {
+      margin: 0px 0px 0px 44.7em; }
+
+  footer {
+    width: 900px;
     margin: auto; } }
 
 /*# sourceMappingURL=style.css.map */

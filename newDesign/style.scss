@@ -142,6 +142,34 @@ a {
     transition: $transition-duration;
     text-shadow: 0 0 .65px
   }
+
+  button {
+    background: none;
+    color: $text--color;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat-Regular;
+  }
+
+  button:after {
+    display: block;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 1px; /*задаём ширину линии*/
+    background-color: $text--color; /*задаём цвет линии*/
+    content: "";
+    transition: 0.3s; /*задаём время анимации*/
+  }
+
+  button:hover:after,
+  button:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+  }
+
+  button:hover {
+    transition: $transition-duration;
+    text-shadow: 0 0 .65px
+  }
 }
 
 .submit-application {
@@ -170,6 +198,9 @@ a {
   backdrop-filter: blur(4px);
   top: 0;
   left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 2;
 
   .popup__body {
     min-height: 100%;
@@ -189,9 +220,8 @@ a {
     gap: 1.25em;
     border-radius: 8px;
     background: $background--color;
+    border: 2px solid #FFF;
   }
-
-
 
   .popup__cross {
     position: absolute;
@@ -215,6 +245,64 @@ a {
     input {
       width: 30.625em;
       margin-top: 0.5em;
+      outline:none;
+    }
+  }
+
+  .popup__body_call {
+
+    .call {
+      flex-direction: column;
+
+      select {
+        width: 25%;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    form {
+      width: 34em;
+    }
+
+    .submit__button {
+      width: 100%;
+    }
+  }
+
+
+
+  .poop {
+    display: flex;
+    position: relative;
+
+    select {
+      color: #FFFFFF;
+      display: flex;
+      height: 2.8125em;
+      align-items: center;
+      gap: 0.625em;
+      align-self: stretch;
+      border-radius: 4px 0 0 4px;
+      border: 1px solid #979797;
+      background: #22242A;
+      margin-top: 8px;
+      width: 18%;
+      position: absolute;
+      border-right: none;
+      outline:none;
+    }
+
+    input {
+      //direction: rtl;
+      padding-left:  6.25em;
+
     }
   }
 
@@ -398,6 +486,7 @@ main {
 
     .main-page-up {
       position: absolute;
+      width: 56.5625em;
       top: 2em;
       right: 0;
       z-index: -1;
@@ -554,12 +643,12 @@ main {
     .slogan__direction {
       display: flex;
       flex-direction: column;
-      //justify-content: center;
-      //align-items: center;
       gap: 1.25em;
       width: 45em;
       padding: 3.75em 0 0 6.25em;
       position: relative;
+      grid-column-start: 2;
+      grid-column-end: 4;
 
       p {
         font-size: 14px;
@@ -719,6 +808,10 @@ footer {
       flex-shrink: 0;
     }
 
+    svg {
+      width: 2.25em;
+    }
+
     svg:hover {
       fill: $action-color;
       transition: $transition-duration;
@@ -787,6 +880,41 @@ footer {
     margin: auto;
   }
 }
+
+@media (max-width: 900px) {
+  body {
+    font-size: 11px;
+  }
+
+  header {
+    width: 900px;
+    margin: auto;
+  }
+
+  main {
+    width: 900px;
+    margin: auto;
+    padding: 0 50px;
+
+    .advantages {
+      .main-page-center {
+        left: -5.75em;
+      }
+
+      .vertical-line--decor {
+        margin: 0px 0px 0px 44.7em;
+      }
+    }
+  }
+
+  footer {
+    width: 900px;
+    margin: auto;
+  }
+}
+
+
+
 
 
 
