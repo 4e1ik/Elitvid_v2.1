@@ -286,8 +286,9 @@ header {
     gap: 1.5625em; }
 
 main {
-  padding: 0 130px;
-  position: relative; }
+  padding: 0 8.125em;
+  position: relative;
+  overflow: hidden; }
   main section {
     display: flex;
     justify-content: space-between;
@@ -337,19 +338,19 @@ main {
       height: 1px;
       background-color: #979797;
       margin: -7.5em 0 0 8.4375em;
-      width: 50%; }
+      width: 37em; }
     main .advantages .vertical-line--decor {
       height: 1.5625em;
       width: 1px;
       background-color: #979797;
-      margin: 0px 0px 0px 45.25em; }
+      margin: 0px 0px 0px 45.35em; }
     main .advantages .description {
       display: flex;
       justify-content: flex-end;
       margin-top: -4.125em; }
     main .advantages .main-page-center {
       position: absolute;
-      left: 0;
+      left: -8em;
       width: 43.75em;
       height: 27.625em;
       margin-top: 0.77em;
@@ -428,7 +429,7 @@ main {
       grid-column-start: 2;
       grid-column-end: 4; }
       main .produce .slogan__direction p {
-        font-size: 14px; }
+        font-size: 0.875em; }
       main .produce .slogan__direction .lines-decor {
         position: absolute;
         margin-top: 10.9375em; }
@@ -456,7 +457,8 @@ main {
       display: flex;
       flex-direction: column;
       height: 22.5em;
-      width: 22.5em; }
+      width: 22.5em;
+      justify-self: center; }
     main .produce a {
       display: flex;
       justify-content: center;
@@ -572,25 +574,41 @@ footer {
   footer {
     width: 1440px;
     margin: auto; } }
-@media (max-width: 900px) {
+@media (max-width: 1440px) {
+  body {
+    font-size: 15px; }
+
+  main {
+    padding: 0 5em; } }
+@media (max-width: 1280px) {
+  body {
+    font-size: 14px; }
+
+  main {
+    padding: 0 6.875em; } }
+@media (max-width: 1210px) {
+  body {
+    font-size: 13px; }
+
+  main {
+    padding: 0 4em; } }
+@media (max-width: 1024px) {
   body {
     font-size: 11px; }
 
-  header {
-    width: 900px;
-    margin: auto; }
+  main {
+    padding: 0 5.625em; } }
+@media (max-width: 900px) {
+  body {
+    font-size: 10px; }
 
   main {
-    width: 900px;
-    margin: auto;
-    padding: 0 50px; }
-    main .advantages .main-page-center {
-      left: -5.75em; }
-    main .advantages .vertical-line--decor {
-      margin: 0px 0px 0px 44.7em; }
+    padding: 0 3.125em; } }
+@media (max-width: 768px) {
+  body {
+    font-size: 9px; }
 
-  footer {
-    width: 900px;
-    margin: auto; } }
+  main {
+    padding: 0 3.125em; } }
 
 /*# sourceMappingURL=style.css.map */
