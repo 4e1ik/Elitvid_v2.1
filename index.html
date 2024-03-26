@@ -26,6 +26,21 @@
                 <li><a href="tel:375297665012" class="phone-number">+375 (29) 766-50-12</a></li>
             </ul>
         </nav>
+        <button class="header__burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+<!--        <nav class="header-menu&#45;&#45;mobile">-->
+<!--            <ul class="header-menu-list&#45;&#45;mobile menu">-->
+<!--                <li><a href="">Наши направления</a></li>-->
+<!--                <li>-->
+<!--                    <button class="call">Заказать звонок</button>-->
+<!--                </li>-->
+<!--                <li><a href="tel:375297034014" class="phone-number">+375 (29) 703 40 14</a></li>-->
+<!--                <li><a href="tel:375297665012" class="phone-number">+375 (29) 766-50-12</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
     </div>
 </header>
 <main>
@@ -139,9 +154,12 @@
                     оригинальные задачи по Вашим размерам, эскизам и чертежам.</p>
             </div>
             <div class="submit-application">
-                <button class="submit-application--button open_popup_application">
-                    Оставить заявку
-                </button>
+                <a href="">
+                    <button class="submit-application--button open_popup_application">
+                        Оставить заявку
+                    </button>
+                </a>
+
             </div>
             <div class="vertical-line--decor">
                 <div class="line"></div>
@@ -311,6 +329,37 @@
             </div>
         </div>
     </section>
+    <section class="decorative_elements">
+        <div class="lines-decor">
+            <div class="vertical-line--decor"></div>
+            <div class="horizontal-line--decor"></div>
+            <div class="vertical-line-2--decor"></div>
+        </div>
+        <div class="decorative_elements__main">
+            <div class="decorative_elements__description">
+                <div class="elements_main__headers">
+                    <h2>Декоративные элементы</h2>
+                    <h4>Изготовление и производство по индивидуальному проекту заказчика.</h4>
+                </div>
+                <div class="elements_main__paragraphs">
+                    <p>Есть возможность нанести орнамент или логотип на ваше изделие. А так же разместить металлическую
+                        вставку.</p>
+                    <p>Полистоун - искусственный камень, современный иновационный материал, представляющий собой
+                        альтернативу натуральному камню.</p>
+                </div>
+                <div class="elements_main__button">
+                    <a href="">
+                        <button>
+                            Подробнее
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="decorative_elements__image">
+                <img src="./newDesign/imgs/main_page/decor.png" alt="Картинка, описывающая декорации для продукции">
+            </div>
+        </div>
+    </section>
     <section class="works">
         <h2>Наши работы</h2>
         <div class="produce-video">
@@ -372,9 +421,12 @@
                 <p>Воплотим ваши идеи в реальность!</p>
             </div>
             <div class="request-phone">
-                <button class="request-phone--button call">
-                    Заказать звонок
-                </button>
+                <a href="">
+                    <button class="request-phone--button call">
+                        Заказать звонок
+                    </button>
+                </a>
+
             </div>
         </div>
         <div class="information-column">
@@ -438,8 +490,9 @@
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./newDesign/js/sliders/main_slider.js"></script>
-<script src="./newDesign/js/popupSubmitApplication.js"></script>
-<script src="./newDesign/js/popupRequestCall.js"></script>
+<script defer src="./newDesign/js/sliders/main_slider.js"></script>
+<script defer src="./newDesign/js/popupSubmitApplication.js"></script>
+<script defer src="./newDesign/js/popupRequestCall.js"></script>
+<script defer src="./newDesign/js/burgerMenu.js"></script>
 </body>
 </html>
