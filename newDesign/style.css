@@ -218,7 +218,7 @@ header.open .header__burger span:nth-child(3) {
       border-radius: 4px 0 0 4px;
       border: 1px solid #979797;
       background: #22242A;
-      margin-top: 8px;
+      margin-top: 0.5em;
       width: 18%;
       position: absolute;
       border-right: none;
@@ -726,6 +726,11 @@ footer {
   footer {
     padding: 3.75em 3.125em; } }
 @media (max-width: 768px) {
+  .popup .popup__body_call .call select {
+    width: 28%; }
+  .popup .popup__body_call .call .poop input {
+    padding-left: 7.25em; }
+
   body {
     font-size: 9px; }
 
@@ -759,7 +764,8 @@ footer {
   header .header-menu--list {
     display: flex;
     flex-direction: column;
-    gap: 0.2em; }
+    gap: 1.2em;
+    font-size: 1.5em; }
 
   header.open .header-menu {
     transform: translateY(20em);
